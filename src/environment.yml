@@ -1,0 +1,38 @@
+name: XCS330
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.10
+  - cloudpickle=2.2.1
+  - cycler=0.11.0
+  - h5py=3.11.0
+  - lockfile=0.12.2
+  - opt-einsum=3.3.0
+  - packaging=23.2
+  - pandas=2.2.1
+  - pickleshare=0.7.5
+  - python-dateutil=2.9.0post0
+  - requests=2.31.0
+  - scipy=1.13.0
+  - six=1.16.0
+  - scikit-learn=1.4.2
+  - tensorboard=2.12.1
+  - pytest=7.4.0
+  - imageio=2.33.1
+  - svglib=1.5.1
+  - googledrivedownloader=0.4
+  - matplotlib=3.8.4
+  - pip=24.0
+  - pip:
+    - timeout_decorator==0.5.0
+    - "--find-links https://download.pytorch.org/whl/torch_stable.html"
+    - torch==2.3.0; sys_platform != "linux" and sys_platform != "win32"
+    - torch==2.3.0+cpu; sys_platform == "linux" or sys_platform == "win32"
+    - rouge-score==0.1.2
+    # Manage the below packages over pip to avoid segmentation fault in transformers on Mac
+    - huggingface-hub==0.23.1
+    - transformers==4.41.1
+    - datasets==2.19.1
+    - numpy==1.26.4

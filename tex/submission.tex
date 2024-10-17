@@ -1,0 +1,241 @@
+% This contents of this file will be inserted into the _Solutions version of the
+% output tex document.  Here's an example:
+
+% If assignment with subquestion (1.a) requires a written response, you will
+% find the following flag within this document: <SCPD_SUBMISSION_TAG>_1a
+% In this example, you would insert the LaTeX for your solution to (1.a) between
+% the <SCPD_SUBMISSION_TAG>_1a flags.  If you also constrain your answer between the
+% START_CODE_HERE and END_CODE_HERE flags, your LaTeX will be styled as a
+% solution within the final document.
+
+% Please do not use the '<SCPD_SUBMISSION_TAG>' character anywhere within your code.  As expected,
+% that will confuse the regular expressions we use to identify your solution.
+\def\assignmentnum{2 }
+\def\assignmenttitle{XCS330 Problem Set \assignmentnum}
+\input{macros}
+\begin{document}
+\pagestyle{myheadings} \markboth{}{\assignmenttitle}
+
+% <SCPD_SUBMISSION_TAG>_entire_submission
+
+This handout includes space for every question that requires a written response.
+Please feel free to use it to handwrite your solutions (legibly, please).  If
+you choose to typeset your solutions, the |README.md| for this assignment includes
+instructions to regenerate this handout with your typeset \LaTeX{} solutions.
+\ruleskip
+
+
+\LARGE
+3.a
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_3_a
+\begin{answer}
+    % ### START CODE HERE ###
+    Smoothed Results:
+K=1, N=2
+○ Accuracy: 0.9442
+○ Loss: 0.3294
+
+K=2, N=2
+○ Accuracy: 0.9648
+○ Loss: 0.2355
+
+K=1, N=3
+○ Accuracy: 0.8448
+○ Loss: 0.5657
+
+K=1, N=4
+○ Accuracy: 0.5776
+○ Loss: 1.1095
+
+Increasing the number of classes (N) from 2 to 4 results in a significant decrease in model performance.
+
+● N=2: With 2 classes, the model achieves high accuracy (0.9442 and 0.9648) and low loss (0.3294 and 0.2355).
+
+● N=3: With 3 classes, accuracy drops to 0.8448, and loss increases to 0.5657.
+
+● N=4: With 4 classes, the accuracy drops further to 0.5776, and loss increases significantly to 1.1095.
+
+This indicates that the model struggles to differentiate between more classes, which increases the complexity of the task and leads to higher misclassification rates and loss values.
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_3_a
+
+\clearpage
+
+\LARGE
+3.b
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_3_b
+\begin{answer}
+    % ### START CODE HERE ###
+    Smoothed Results:
+K=1, N=2
+○ Accuracy: 0.9442
+○ Loss: 0.3294
+
+K=2, N=2
+○ Accuracy: 0.9648
+○ Loss: 0.2355
+
+Increasing the number of examples in the support set (K) from 1 to 2 improves model performance.
+
+● K=1, N=2: The accuracy is 0.9442, and the loss is 0.3294.
+
+● K=2, N=2: The accuracy improves to 0.9648, and the loss decreases to 0.2355.
+
+This shows that having more examples per class helps the model learn better representations and improves its generalization ability, resulting in higher accuracy and lower loss.
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_3_b
+
+\clearpage
+
+\LARGE
+4.a
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_4_a
+\begin{answer}
+    % ### START CODE HERE ###
+    In this experiment, I analyzed the impact of different learning rates on the model's performance. The learning rates tested were 0.0001, 0.001, 0.01, and 0.1. Each experiment was run with different combinations of num_shot and num_classes to observe the model's generalization and convergence behavior.
+Metrics Monitored
+Accuracy/train: Accuracy on the training set.
+Accuracy/test: Accuracy on the test set.
+Loss/train: Loss on the training set.
+Loss/test: Loss on the test set.
+
+
+
+Below is a detailed analysis of each learning rate across different metrics and cases.
+Learning Rate: 0.0001
+Training Accuracy
+2_1_123_0.0001_128: Reached a final accuracy of 0.9297.
+2_2_123_0.0001_128: Reached a final accuracy of 0.918.
+3_1_123_0.0001_128: Reached a final accuracy of 0.6953.
+4_1_123_0.0001_128: Reached a final accuracy of 0.668.
+Test Accuracy
+2_1_123_0.0001_128: Reached a final accuracy of 0.9023.
+2_2_123_0.0001_128: Reached a final accuracy of 0.8906.
+3_1_123_0.0001_128: Reached a final accuracy of 0.6901.
+4_1_123_0.0001_128: Reached a final accuracy of 0.5938.
+Training Loss
+2_1_123_0.0001_128: Final loss was 0.2929.
+2_2_123_0.0001_128: Final loss was 0.2966.
+3_1_123_0.0001_128: Final loss was 0.8001.
+4_1_123_0.0001_128: Final loss was 0.9946.
+Test Loss
+2_1_123_0.0001_128: Final loss was 0.3194.
+2_2_123_0.0001_128: Final loss was 0.3418.
+3_1_123_0.0001_128: Final loss was 0.8022.
+4_1_123_0.0001_128: Final loss was 1.0862.
+Learning Rate: 0.001
+Training Accuracy
+2_1_123_0.001_128: Reached a final accuracy of 0.9727.
+2_2_123_0.001_128: Reached a final accuracy of 0.9766.
+3_1_123_0.001_128: Reached a final accuracy of 0.8906.
+4_1_123_0.001_128: Reached a final accuracy of 0.873.
+Test Accuracy
+2_1_123_0.001_128: Reached a final accuracy of 0.9453.
+2_2_123_0.001_128: Reached a final accuracy of 0.9531.
+3_1_123_0.001_128: Reached a final accuracy of 0.8698.
+4_1_123_0.001_128: Reached a final accuracy of 0.5605.
+Training Loss
+2_1_123_0.001_128: Final loss was 0.298.
+2_2_123_0.001_128: Final loss was 0.2167.
+3_1_123_0.001_128: Final loss was 0.5084.
+4_1_123_0.001_128: Final loss was 0.7814.
+Test Loss
+2_1_123_0.001_128: Final loss was 0.3286.
+2_2_123_0.001_128: Final loss was 0.2499.
+3_1_123_0.001_128: Final loss was 0.539.
+4_1_123_0.001_128: Final loss was 1.1152.
+Learning Rate: 0.01
+Training Accuracy
+2_1_123_0.01_128: Reached a final accuracy of 0.8828.
+2_2_123_0.01_128: Reached a final accuracy of 0.8945.
+3_1_123_0.01_128: Reached a final accuracy of 0.9094.
+4_1_123_0.01_128: Reached a final accuracy of 1.0819.
+Test Accuracy
+2_1_123_0.01_128: Reached a final accuracy of 0.8867.
+2_2_123_0.01_128: Reached a final accuracy of 0.8125.
+3_1_123_0.01_128: Reached a final accuracy of 0.388.
+4_1_123_0.01_128: Reached a final accuracy of 0.3789.
+Training Loss
+2_1_123_0.01_128: Final loss was 0.4187.
+2_2_123_0.01_128: Final loss was 0.3958.
+3_1_123_0.01_128: Final loss was 0.9094.
+4_1_123_0.01_128: Final loss was 1.0819.
+Test Loss
+2_1_123_0.01_128: Final loss was 0.4282.
+2_2_123_0.01_128: Final loss was 0.4494.
+3_1_123_0.01_128: Final loss was 1.0986.
+4_1_123_0.01_128: Final loss was 1.2895.
+Learning Rate: 0.1
+Training Accuracy
+2_1_123_0.1_128: Reached a final accuracy of 0.5.
+2_2_123_0.1_128: Reached a final accuracy of 0.5391.
+3_1_123_0.1_128: Reached a final accuracy of 0.3411.
+4_1_123_0.1_128: Reached a final accuracy of 0.5273.
+Test Accuracy
+2_1_123_0.1_128: Reached a final accuracy of 0.5.
+2_2_123_0.1_128: Reached a final accuracy of 0.5.
+3_1_123_0.1_128: Reached a final accuracy of 0.3229.
+4_1_123_0.1_128: Reached a final accuracy of 0.25.
+Training Loss
+2_1_123_0.1_128: Final loss was 0.6931.
+2_2_123_0.1_128: Final loss was 0.2167.
+3_1_123_0.1_128: Final loss was 1.0986.
+4_1_123_0.1_128: Final loss was 1.3863.
+Test Loss
+2_1_123_0.1_128: Final loss was 0.6931.
+2_2_123_0.1_128: Final loss was 0.2167.
+3_1_123_0.1_128: Final loss was 1.0986.
+4_1_123_0.1_128: Final loss was 1.3863.
+Conclusion:
+Optimal Learning Rate: 0.001 provided the best balance between learning speed, convergence, and generalization.
+High Learning Rates (0.1): Led to instability and poor generalization, likely due to overshooting during gradient descent.
+Low Learning Rates (0.0001): Resulted in slow learning and potential underfitting, requiring more epochs to converge effectively.
+Rationale for Choosing Learning Rate as the Hyperparameter:
+The learning rate is a crucial hyperparameter in training neural networks as it controls the step size of the gradient descent optimization. It directly affects the convergence speed and the stability of the training process. By experimenting with different learning rates, I can find the optimal value that balances the trade-off between fast convergence and stable, effective learning.
+    % ### END CODE HERE ###
+\end{answer}
+% <SCPD_SUBMISSION_TAG>_4_a
+
+\clearpage
+
+\LARGE
+4.b
+\normalsize
+
+% <SCPD_SUBMISSION_TAG>_4_b
+\begin{answer}
+    % ### START CODE HERE ###
+    In the experiment, I analyzed how varying the memory capacity of an LSTM model influences its ability to process and retain information over time, focusing specifically on the K = 1, N = 3 case with different hidden state sizes: 8, 128, and 256 units. Here's what I observed:
+
+High Memory Capacity (256 units)
+Accuracy: Smoothed at 86.75%, indicating high performance.
+Loss: Smoothed test loss recorded at 0.5304, showing efficient error minimization.
+With the largest memory capacity tested, the model displayed exceptional performance, managing to capture complex patterns and dependencies in the data. This size allows the model to hold a significant amount of information, facilitating a deeper understanding of long-term relationships in the sequence data.
+
+Medium Memory Capacity (128 units)
+Accuracy: Smoothed at 84.48%, quite robust but slightly less than the highest capacity.
+Loss: Smoothed test loss was 0.5657, a bit higher than the largest model.
+This setup shows a balanced approach, maintaining good performance while being less resource-intensive than the largest model. It handles long-term dependencies well, though not as adeptly as the 256-unit model, suggesting that there is a noticeable trade-off between memory capacity and the ability to generalize over longer sequences.
+
+Low Memory Capacity (8 units)
+Accuracy: Smoothed at only 55.39%, significantly lower.
+Loss: Smoothed test loss worsened to 0.9219.
+This model struggled with long-term dependencies due to its limited capacity to retain earlier information, which is crucial for understanding sequences. The performance drop is stark, underscoring how essential adequate memory is for tasks that require detailed memory of past inputs.
+
+Summary:
+The experiment highlights a clear trend: increasing the memory capacity of an LSTM significantly boosts its performance by enhancing its ability to understand and remember long-term dependencies. Conversely, reducing the memory capacity severely hampers the model’s performance, indicating that a certain threshold of memory is crucial for effectively processing sequential data.
+    % ### END CODE HERE ###
+  \end{answer}
+% <SCPD_SUBMISSION_TAG>_4_b
+
+% <SCPD_SUBMISSION_TAG>_entire_submission
+
+\end{document}
